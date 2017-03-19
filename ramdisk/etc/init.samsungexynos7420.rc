@@ -999,3 +999,7 @@ service ipsec-daemon /system/bin/IPSecService
     socket ipsec_socket stream 660 system system
     user system
     group system net_raw inet net_admin
+
+# Touchkey
+    chown system system /sys/class/sec/sec_touchkey/touchkey_enable
+    chmod 0660 /sys/class/sec/sec_touchkey/touchkey_enable
